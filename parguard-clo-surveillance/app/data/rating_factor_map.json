@@ -1,0 +1,16 @@
+{
+  "methodology_note": "Illustrative ParGuard educational mapping only; not Moody's, S&P, Fitch, DBRS Morningstar, Kroll, or any official rating-agency methodology. Factors increase monotonically as ratings worsen.",
+  "factors": {
+    "BB": 100,
+    "BB-": 150,
+    "B+": 250,
+    "B": 350,
+    "B-": 500,
+    "CCC+": 900,
+    "CCC": 1200,
+    "CCC-": 1800,
+    "CC": 3000,
+    "C": 5000,
+    "D": 10000
+  }
+}

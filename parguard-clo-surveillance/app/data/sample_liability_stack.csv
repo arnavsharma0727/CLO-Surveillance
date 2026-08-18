@@ -1,0 +1,6 @@
+tranche_name,seniority_rank,outstanding_par,annual_coupon_rate,oc_trigger,ic_trigger,is_equity
+Class A-1 notes,1,240000000,0.0575,1.28,1.6,False
+Class A-2 notes,2,35000000,0.0625,1.2,1.35,False
+Class B notes,3,25000000,0.075,1.12,1.2,False
+Class C notes,4,18000000,0.0925,1.06,1.1,False
+Subordinated notes / equity,5,37000000,0.0,,,True

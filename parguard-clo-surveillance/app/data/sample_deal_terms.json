@@ -1,0 +1,10 @@
+{
+  "deal_name": "ParGuard 2026-1",
+  "as_of_date": "2026-08-18",
+  "reinvestment_status": "Illustrative / Reinvestment Period",
+  "ccc_concentration_limit": 0.075,
+  "ccc_excess_haircut_description": "Educational simplification: excess CCC par above the limit is valued using the lower of aggregate CCC market value or 50% of CCC par, applied proportionally to excess CCC par. Not indenture-specific legal treatment.",
+  "defaulted_interest_zero": true,
+  "administrative_expenses": 1500000.0,
+  "disclaimer": "Illustrative educational model. Not investment research, legal interpretation, or investment advice."
+}
