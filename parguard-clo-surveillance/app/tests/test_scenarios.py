@@ -47,3 +47,11 @@ def test_custom_scenario_applies_loan_and_industry_controls():
     result = run_custom_scenario(loans, liabilities, {"loans_to_default": ["PG26-001"], "industry_price_shocks": {"Technology": -5}, "ccc_limit_override": 0.05}, terms.ccc_concentration_limit)
     assert any(ch["loan_id"] == "PG26-001" for ch in result["impacted_loans"])
     assert result["scenario_id"] == "custom"
+
+
+def test_rate_compression_reduces_ic_income():
+    loans, liabilities, terms = _inputs()
+    result = run_preset_scenario("rate_spread_compression_shock", loans, liabilities, terms.ccc_concentration_limit)
+    assert result["change_in_portfolio_interest_income"] < 0
+    ic_changes = [v for k, v in result["change_in_oc_ic_ratios"].items() if k.startswith("IC")]
+    assert min(ic_changes) < 0
