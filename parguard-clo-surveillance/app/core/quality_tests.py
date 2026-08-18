@@ -29,6 +29,8 @@ def collateral_quality_metrics(loans: pd.DataFrame, ccc_limit_pct: float = 0.075
     df = add_loan_calculations(loans)
     total_par = float(df["par_balance"].sum())
     defaulted = df[df["default_status"]]
+    if total_par == 0:
+        return {"total_par": 0.0, "total_market_value": 0.0, "total_adjusted_par": 0.0, "was_bps": 0.0, "wal_years": 0.0, "warf": 0.0, "warr": 0.0, "ccc_pct": 0.0, "top_10_obligor_concentration": 0.0, "top_industry_concentration": 0.0, "watchlist_count": 0.0, "defaulted_count": 0.0, "defaulted_par": 0.0, "parguard_diversification_index": 0.0, "annual_interest_income": 0.0}
     industry_par = df.groupby("industry")["par_balance"].sum()
     obligor_par = df.groupby("obligor_name")["par_balance"].sum().sort_values(ascending=False)
     return {
